@@ -108,8 +108,36 @@ function sockMerchant(n, ar) {
 
 // const n = 9;
 // const ar = [10, 20, 20, 10, 10, 30, 50, 10, 20];
-
 // console.log(sockMerchant(n, ar));
 
+
+// Staircase * stacks Problem 
+
+function staircase(n) {
+  let output = '';
+  for (let i = 1; i <= n; i++) {
+    for (let s = n - 1; s >= i; s--) {
+      output += ' ';
+    }
+    for (let h = 1; h <= i; h++) {
+      output += '#'
+    }
+    output += '\n'
+  }
+  console.log(output);
+}
+
+staircase(9);
+
+//Expected Output:
+//         #
+//        ##
+//       ###
+//      ####
+//     #####
+//    ######
+//   #######
+//  ########
+// #########
 
 
