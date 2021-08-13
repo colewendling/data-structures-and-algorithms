@@ -106,8 +106,8 @@ function sockMerchant(n, ar) {
   return pairs;
 }
 
-const n = 9;
-const ar = [10, 20, 20, 10, 10, 30, 50, 10, 20];
+// const n = 9;
+// const ar = [10, 20, 20, 10, 10, 30, 50, 10, 20];
 
 // console.log(sockMerchant(n, ar));
 
