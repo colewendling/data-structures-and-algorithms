@@ -1,7 +1,6 @@
 // Cole's solution:
 
 // o(n) vs nested loop O(n^2)
-
 function same(arr1, arr2) {
   if (arr1.length !== arr2.length) return false;
   let dummy = arr1.map(el => el * el);
@@ -17,13 +16,11 @@ const arr3 = [4, 9, 80];
 
 console.log(same(arr1, arr2));
 // #=> true
-
 console.log(same(arr1, arr3));
 // #=> false
 
 
 //naive
-
 function same(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
@@ -42,7 +39,6 @@ function same(arr1, arr2) {
 same([1, 2, 3, 2], [9, 1, 4, 4])
 
 //refactored 
-
 function same(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
