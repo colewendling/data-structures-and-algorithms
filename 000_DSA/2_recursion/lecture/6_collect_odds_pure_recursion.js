@@ -10,19 +10,21 @@ function collectOddValues(arr){
     }
         
     newArr = newArr.concat(collectOddValues(arr.slice(1)));
-    /*
-        collectOddValues([1,2,3,4,5])
-          [1].concat((collectOddValues([2,3,4,5]))
-            [].concat(( collectOddValues([3,4,5]))
-                [3].concat((collectOddValues([4,5]))
-                  [].concat((collectOddValues([5]))
-                      [5].concat((collectOddValues([]))
-                        []
-    */
     return newArr;
-}
+  }
 
-collectOddValues([1,2,3,4,5])
+  collectOddValues([1,2,3,4,5]);
+  
+  /*
+      collectOddValues([1,2,3,4,5])
+        [1].concat((collectOddValues([2,3,4,5]))
+          [].concat(( collectOddValues([3,4,5]))
+              [3].concat((collectOddValues([4,5]))
+                [].concat((collectOddValues([5]))
+                    [5].concat((collectOddValues([]))
+                      []
+  */
+
                                         
                                                                 
                                                                              
