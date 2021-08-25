@@ -1,44 +1,24 @@
-// Cole's solution:
+// Time complexity: o(n) vs nested loop O(n^2)
 
-// o(n) vs nested loop O(n^2)
-function same(arr1, arr2) {
-  if (arr1.length !== arr2.length) return false;
-  let dummy = arr1.map(el => el * el);
-  for (let i = 0; i < arr2.length; i++) {
-    if (dummy[i] !== arr2[i]) return false;
-  }
-  return true;
-}
-
-const arr1 = [2, 3, 4];
-const arr2 = [4, 9, 16];
-const arr3 = [4, 9, 80];
-
-console.log(same(arr1, arr2));
-// #=> true
-console.log(same(arr1, arr3));
-// #=> false
-
-
-//naive
+//naive same-frequency
 function same(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
   }
   for (let i = 0; i < arr1.length; i++) {
-    let correctIndex = arr2.indexOf(arr1[i] ** 2)
-    if (correctIndex === -1) {
+    let indexInArr2 = arr2.indexOf(arr1[i] ** 2)
+    if (indexInArr2 === -1) { // returns -1 if there is no el in arr2
       return false;
     }
     console.log(arr2);
-    arr2.splice(correctIndex, 1)
+    arr2.splice(correctIndex, 1); //remove the el from arr2
   }
   return true;
 }
 
 same([1, 2, 3, 2], [9, 1, 4, 4])
 
-//refactored 
+//refactored same-frequency
 function same(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
