@@ -18,7 +18,7 @@ function same(arr1, arr2) {
 
 same([1, 2, 3, 2], [9, 1, 4, 4])
 
-//refactored same-frequency
+//refactored same-frequency - O(n) time complexity - 2 loops better than nested
 function same(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
