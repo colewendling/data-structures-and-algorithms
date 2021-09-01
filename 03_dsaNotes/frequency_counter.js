@@ -45,3 +45,29 @@ function same(arr1, arr2) {
 }
 
 same([1, 2, 3, 2, 5], [9, 1, 4, 4, 11])
+
+//Refactored O(n) time complexity
+
+// I: arr = [2, 4, 6]
+// I: arr2 = [36, 4, 16]
+// O: true
+
+function frequencyCounter(arr1, arr2) {
+  if (arr1.length !== arr2.length) return false;
+
+  let c1 = {};
+  let c2 = {};
+  for (let n of arr1) c1[n] ? c1[n]++ : c1[n] = 1;
+  for (let n of arr2) c2[n] ? c2[n]++ : c2[n] = 1;
+
+  for (let key in c1) {
+    if (!(key ** 2 in c2)) return false;
+    if (c2[key ** 2] !== c1[key]) return false;
+  }
+
+  return true;
+}
+
+const arr1 = [2, 4, 6];
+const arr2 = [36, 4, 16];
+frequencyCounter(arr1, arr2);
