@@ -1,6 +1,5 @@
-
+// Mock Technical Problem - 9-3
 'use strict';
-
 const spiralOrder = function (matrix) {
   let res = [];
 
